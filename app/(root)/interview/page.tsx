@@ -7,12 +7,13 @@ const Page = async () => {
 
   return (
     <>
+    
       <h3>Interview generation</h3>
-
+{/* //// AT 3:40 CHECK THE VDO */}
       <Agent
         userName={user?.name!}
         userId={user?.id}
-        //! you have done here a chnage ?? dont know why 
+        // you have done here a chnage ?? dont know why 
         
         // profileImage={user?.profileURL}
         type="generate"

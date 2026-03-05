@@ -16,6 +16,7 @@ enum TranscriptMessageTypeEnum {
   FINAL = "final",
 }
 
+
 interface BaseMessage {
   type: MessageTypeEnum;
 }
