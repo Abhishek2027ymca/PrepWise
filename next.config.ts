@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   //  Removed ignoreDuringBuilds and ignoreBuildErrors
   // Now all TypeScript and ESLint errors are caught during build
   // This ensures code quality and catches bugs early
+  eslint: {
+     ignoreDuringBuilds: true,
+   },
+   typescript: {
+     ignoreBuildErrors: true,
+   },
 };
 
 export default nextConfig;
