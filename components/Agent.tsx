@@ -124,19 +124,18 @@ const Agent = ({
     setCallStatus(CallStatus.CONNECTING);
 
     if (type === "generate") {
-      await vapi.start(
-        undefined,
-        undefined,
-        undefined,
-        process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!,
-        {
-          variableValues: {
-            username: userName,
-            userid: userId,
-          },
-        }
-      );
-    } else {
+  await vapi.start(
+    process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID!,
+    {
+      metadata: {
+        userid: userId,
+        username: userName,
+      },
+    }
+  );
+} 
+// changed block of code 
+else {
       let formattedQuestions = "";
       if (questions) {
         formattedQuestions = questions
