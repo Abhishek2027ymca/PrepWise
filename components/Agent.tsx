@@ -122,18 +122,19 @@ const Agent = ({
 
   const handleCall = async () => {
     setCallStatus(CallStatus.CONNECTING);
+    
+if (type === "generate") {
+  console.log("Assistant ID:", process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID);
 
-    if (type === "generate") {
   await vapi.start(
     process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID!,
     {
       metadata: {
         userid: userId,
-        username: userName,
       },
     }
   );
-} 
+}
 // changed block of code 
 else {
       let formattedQuestions = "";
